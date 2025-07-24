@@ -10,3 +10,4 @@ elif [[ "$direction" == "right" ]]; then
 fi
 
 [[ -n "$target" ]] && i3-msg workspace number "$target"
+

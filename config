@@ -190,5 +190,10 @@ bindsym Control+$mod+equal exec flameshot gui
 bindsym Control+Mod1+h exec --no-startup-id ~/.config/i3/workspace_nav.sh left
 bindsym Control+Mod1+l exec --no-startup-id ~/.config/i3/workspace_nav.sh right
 
+# move container to left and right arrow
 bindsym Control+Mod1+Left exec --no-startup-id ~/.config/i3/move_container.sh left
 bindsym Control+Mod1+Right exec --no-startup-id ~/.config/i3/move_container.sh right
+
+
+# next workspace
+bindsym $mod+n exec --no-startup-id ~/.config/i3/next-workspace.sh
