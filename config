@@ -196,11 +196,11 @@ client.focused          #4c7899 #285577 #ffffff #2e9ef4 #2e9ef4
 client.focused_inactive #333333 #222222 #888888 #555555 #555555
 
 # Set borders to appear with 2-pixel width
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 
 # Window colors
-client.focused          #888888 #666666 #ffffff #888888 #666666   # Active window (gray)
-client.unfocused        #444444 #222222 #888888 #444444 #222222   # Inactive windows
+client.focused          #888888 #666666 #ffffff #888888 #666666   
+client.unfocused        #444444 #222222 #888888 #444444 #222222   
 client.focused_inactive #444444 #222222 #888888 #444444 #222222
 client.urgent           #ff0000 #ff0000 #ffffff #ff0000 #ff0000
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
