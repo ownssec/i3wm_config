@@ -60,17 +60,15 @@ bindsym Ctrl+space exec rofi -show drun
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+h focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
-bindsym $mod+l focus right
+# Focus without wrapping (script-based)
+bindsym $mod+h exec --no-startup-id ~/.config/i3/focus_no_wrap.sh left
+bindsym $mod+l exec --no-startup-id ~/.config/i3/focus_no_wrap.sh right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -186,4 +184,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
 
 # screnenshots
-bindsym $mod+Shift+f exec flameshot gui
+bindsym Control+$mod+equal exec flameshot gui
