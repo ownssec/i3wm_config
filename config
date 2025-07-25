@@ -196,4 +196,7 @@ bindsym Control+Mod1+Right exec --no-startup-id ~/.config/i3/move_container.sh r
 
 
 # next workspace
-bindsym $mod+n exec --no-startup-id ~/.config/i3/next-workspace.sh
+bindsym Control+$Mod+n exec --no-startup-id ~/.config/i3/next-workspace.sh
+
+#wallpaper
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wp2.jpg
