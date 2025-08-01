@@ -86,12 +86,12 @@ client.focused_inactive #333333 #222222 #888888 #555555 #555555
 # Set borders to appear with 2-pixel width
 for_window [class=".*"] border pixel 3
 
-# Window colors
-client.focused          #888888 #666666 #ffffff #888888 #666666   
-client.unfocused        #444444 #222222 #888888 #444444 #222222   
-client.focused_inactive #444444 #222222 #888888 #444444 #222222
-client.urgent           #ff0000 #ff0000 #ffffff #ff0000 #ff0000
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+# Window colors (based on #363634)
+client.focused          #363634 #444442 #ffffff #363634 #444442
+client.unfocused        #363634 #2c2c2a #bbbbbb #363634 #2c2c2a
+client.focused_inactive #363634 #2c2c2a #bbbbbb #363634 #2c2c2a
+client.urgent           #cc5555 #cc5555 #ffffff #cc5555 #cc5555
+client.placeholder      #363634 #222221 #999999 #363634 #222221
 
 # screnenshots
 bindsym Control+$mod+equal exec flameshot gui
@@ -114,3 +114,5 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/wp2.jpg
 bindsym Control+$mod+Shift+h move left
 bindsym Control+$mod+Shift+l move right 
 
+#extend monitor
+exec_always --no-startup-id ~/.config/i3/display_setup.sh
