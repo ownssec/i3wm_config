@@ -108,7 +108,7 @@ bindsym Control+Mod1+Right exec --no-startup-id ~/.config/i3/move_container.sh r
 bindsym Control+$Mod+n exec --no-startup-id ~/.config/i3/next-workspace.sh
 
 #wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wp2.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper1.jpg
 
 #move the container to right or left
 bindsym Control+$mod+Shift+h move left
