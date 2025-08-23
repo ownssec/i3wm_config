@@ -235,3 +235,5 @@ Edit
 ps aux | grep polybar
 ps aux | grep flameshot``
 ```
+
+#one command setup
