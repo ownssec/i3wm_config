@@ -116,3 +116,7 @@ bindsym Control+$mod+Shift+l move right
 
 #extend monitor
 exec_always --no-startup-id ~/.config/i3/display_setup.sh
+
+#refresh rate monitor
+exec_always --no-startup-id ~/.config/i3/set_refresh_rate.sh
+
