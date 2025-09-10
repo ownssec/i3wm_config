@@ -86,14 +86,13 @@ client.focused_inactive #333333 #222222 #888888 #555555 #555555
 # Set borders to appear with 2-pixel width
 for_window [class=".*"] border pixel 3
 
-# Window colors (based on #363634)
-client.focused          #363634 #444442 #ffffff #363634 #444442
-client.unfocused        #363634 #2c2c2a #bbbbbb #363634 #2c2c2a
-client.focused_inactive #363634 #2c2c2a #bbbbbb #363634 #2c2c2a
-client.urgent           #cc5555 #cc5555 #ffffff #cc5555 #cc5555
-client.placeholder      #363634 #222221 #999999 #363634 #222221
+# Window colors
+client.focused          #1d2021 #355254 #ffffff #355254 #4a6f72   # deep teal focused
+client.unfocused        #3c3836 #282828 #888888 #282828 #282828   # muted dark
+client.focused_inactive #3c3836 #282828 #888888 #282828 #282828   # same as unfocused
+client.urgent           #cc241d #cc241d #ffffff #cc241d #fb4934   # bright red urgent
+client.placeholder      #1d2021 #d79921 #000000 #d79921 #fabd2f   # gold/yellow placeholder
 
-# screnenshots
 bindsym Control+$mod+equal exec flameshot gui
 
 # Add these new bindings for Ctrl+Alt+h/l navigation
@@ -119,8 +118,6 @@ exec_always --no-startup-id ~/.config/i3/display_setup.sh
 
 #refresh rate monitor
 exec_always --no-startup-id ~/.config/i3/set_refresh_rate.sh
-
-
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -160,8 +157,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Set gaps
-gaps inner 3
-gaps outer 3
+gaps inner 5
+gaps outer 5
 
 # gaps top 5
 # gaps bottom 5
