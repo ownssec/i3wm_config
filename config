@@ -83,15 +83,15 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #2e9ef4
 client.focused_inactive #333333 #222222 #888888 #555555 #555555
 
-# Set borders to appear with 2-pixel width
-for_window [class=".*"] border pixel 3
+# Borders 3px
+for_window [class=".*"] border pixel 1
 
-# Window colors
-client.focused          #1d2021 #355254 #ffffff #355254 #4a6f72   # deep teal focused
-client.unfocused        #3c3836 #282828 #888888 #282828 #282828   # muted dark
-client.focused_inactive #3c3836 #282828 #888888 #282828 #282828   # same as unfocused
-client.urgent           #cc241d #cc241d #ffffff #cc241d #fb4934   # bright red urgent
-client.placeholder      #1d2021 #d79921 #000000 #d79921 #fabd2f   # gold/yellow placeholder
+# Window border colors
+client.focused          #1d2021 #e3e5e6 #c8cecf #e3e5e6 #e3e5e6   # light border when focused
+client.unfocused        #3c3836 #283b3a #c8cecf #283b3a #283b3a   # dark teal border when unfocused
+client.focused_inactive #3c3836 #283b3a #c8cecf #283b3a #283b3a   # same as unfocused
+client.urgent           #cc241d #cc241d #c8cecf #cc241d #fb4934   # red border for urgent
+client.placeholder      #1d2021 #283b3a #000000 #283b3a #283b3a   # muted teal border for placeholder
 
 bindsym Control+$mod+equal exec flameshot gui
 
@@ -160,7 +160,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 gaps inner 5
 gaps outer 5
 
-# gaps top 5
+# gaps top 2
 # gaps bottom 5
 # gaps left 5
 # gaps right 5
