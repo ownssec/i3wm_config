@@ -110,7 +110,7 @@ bindsym Control+$mod+equal exec flameshot gui
 # bindsym Control+$Mod+n exec --no-startup-id ~/.config/i3/next-workspace.sh
 
 #wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/w2.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/w5.png
 
 #move the container to right or left
 bindsym Control+$mod+Shift+h move left
