@@ -44,8 +44,11 @@ bindsym $mod+l exec --no-startup-id ~/.config/i3/focus_no_wrap.sh right
 # bindsym $mod+Control+0 move right
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+f layout tabbed
+# bindsym $mod+f layout tabbed
+# bindsym $mod+f nop
+# bindsym $mod+s nop
 # bindsym $mod+e layout toggle split
+workspace_layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -66,8 +69,8 @@ bindsym $mod+Shift+r restart
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 1 px or 1 ppt
+        bindsym l resize grow width 1 px or 1 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -83,17 +86,16 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #2e9ef4
 client.focused_inactive #333333 #222222 #888888 #555555 #555555
 
-# Set borders to appear with 2-pixel width
-for_window [class=".*"] border pixel 3
+# Borders 3px
+for_window [class=".*"] border pixel 1
 
-# Window colors (based on #363634)
-client.focused          #363634 #444442 #ffffff #363634 #444442
-client.unfocused        #363634 #2c2c2a #bbbbbb #363634 #2c2c2a
-client.focused_inactive #363634 #2c2c2a #bbbbbb #363634 #2c2c2a
-client.urgent           #cc5555 #cc5555 #ffffff #cc5555 #cc5555
-client.placeholder      #363634 #222221 #999999 #363634 #222221
+# Window border colors
+client.focused          #1d2021 #e3e5e6 #c8cecf #e3e5e6 #e3e5e6   # light border when focused
+client.unfocused        #3c3836 #283b3a #c8cecf #283b3a #283b3a   # dark teal border when unfocused
+client.focused_inactive #3c3836 #283b3a #c8cecf #283b3a #283b3a   # same as unfocused
+client.urgent           #cc241d #cc241d #c8cecf #cc241d #fb4934   # red border for urgent
+client.placeholder      #1d2021 #283b3a #000000 #283b3a #283b3a   # muted teal border for placeholder
 
-# screnenshots
 bindsym Control+$mod+equal exec flameshot gui
 
 # Add these new bindings for Ctrl+Alt+h/l navigation
@@ -108,7 +110,7 @@ bindsym Control+$mod+equal exec flameshot gui
 # bindsym Control+$Mod+n exec --no-startup-id ~/.config/i3/next-workspace.sh
 
 #wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/w2.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wpMain.jpg
 
 #move the container to right or left
 bindsym Control+$mod+Shift+h move left
@@ -120,7 +122,8 @@ exec_always --no-startup-id ~/.config/i3/display_setup.sh
 #refresh rate monitor
 exec_always --no-startup-id ~/.config/i3/set_refresh_rate.sh
 
-
+# picom config
+exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -159,15 +162,15 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+
 # Set gaps
 gaps inner 5
-gaps outer 5
+# gaps outer 6
 
-# gaps top 5
-# gaps bottom 5
-# gaps left 5
-# gaps right 5
+gaps top 7
+gaps bottom 11
+gaps left 11
+gaps right 11
 
 # Optional: only apply outer gaps when more than one window is present
 smart_gaps false
-
